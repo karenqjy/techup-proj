@@ -1,135 +1,106 @@
-/* Reset styles for consistency */
+/* General reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f3f8fc; /* Light background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Page container */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
     color: #333;
-}
-
-/* Container styling */
-.container {
-    width: 80%;
-    max-width: 800px;
-    background-color: #ffffff;
+    line-height: 1.6;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    text-align: center;
-}
-
-/* Title styling */
-h1 {
-    color: #4a90e2; /* Primary color */
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Input Group styling */
-.input-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-label {
-    font-weight: 500;
-    margin-right: 15px;
-    font-size: 1.1em;
-    color: #333;
-}
-
-select, input[type="number"] {
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    width: 160px;
-    transition: background-color 0.3s, border 0.3s;
-}
-
-select:focus, input[type="number"]:focus {
-    background-color: #fff;
-    border: 1px solid #4a90e2;
-    outline: none;
-}
-
-/* Competencies container styling */
-#competenciesContainer {
-    margin-top: 20px;
-}
-
-/* Competency fields styling */
-.competency-field {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    background-color: #f0f7ff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-}
-
-.competency-field label {
-    font-weight: 500;
-    color: #4a90e2; /* Matches primary color */
-    text-align: left;
-    flex: 1;
-}
-
-.competency-field select, 
-.competency-field input {
-    width: 120px;
-    padding: 8px;
-    margin-right: 10px;
-    border: 1px solid #d3d3d3;
-    border-radius: 6px;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
     background-color: #ffffff;
-    transition: all 0.3s;
-}
-
-.competency-field select:focus, 
-.competency-field input:focus {
-    border-color: #4a90e2;
-}
-
-/* Additional styling for input alignment and spacing */
-.competency-field select, 
-.competency-field input {
-    flex: 1;
+    border-radius: 8px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styles */
+  h1 {
     text-align: center;
-}
-
-/* Hover effects */
-select:hover, 
-input[type="number"]:hover {
-    background-color: #eaf4ff; /* Light blue hover effect */
-    cursor: pointer;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-    .competency-field {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .competency-field label,
-    .competency-field select,
-    .competency-field input {
-        width: 100%;
-        margin: 5px 0;
-    }
-}
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* Select box and input fields */
+  select, input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+  }
+  
+  select:focus, input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  /* Styling for competency section */
+  #competencies-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Legend styling */
+  .legend {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  .legend p {
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Flexbox layout for competency fields */
+  .competency {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  /* Styling for competency fields (proficiency, MCQ, OE, E) */
+  .competency > div {
+    flex: 1;
+  }
+  
+  .competency input[type="number"] {
+    width: 100%;
+  }
+  
+  /* Title for competency labels */
+  .competency label {
+    margin-bottom: 5px;
+  }
+  
+  

@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competencies Assessment Generator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competencies Assessment Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Competencies Assessment Generator</h1>
-        
-        <!-- Job Grade Dropdown -->
-        <div class="input-group">
-            <label for="jobGrade">Job Grade</label>
-            <select id="jobGrade" onchange="generateFields()">
-                <option value="">Select Job Grade</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-                <option value="F">F</option>
-                <option value="G">G</option>
-                <option value="H">H</option>
-                <option value="I">I</option>
-                <option value="J">J</option>
-                <option value="K">K</option>
-                <option value="L">L</option>
-                <option value="M">M</option>
-            </select>
-        </div>
+  <div class="container">
+    <h1>Competencies Assessment Generator</h1>
 
-        <!-- Competencies Container -->
-        <div id="competenciesContainer"></div>
+    <!-- Job Grade Dropdown -->
+    <div class="form-group">
+      <label for="job-grade">Job Grade</label>
+      <select id="job-grade">
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="G">G</option>
+        <option value="H">H</option>
+        <option value="I">I</option>
+        <option value="J">J</option>
+        <option value="K">K</option>
+        <option value="L">L</option>
+        <option value="M">M</option>
+      </select>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Competencies Section (this will be dynamically populated) -->
+    <div id="competencies-section"></div>
+
+    <!-- Legend -->
+    <div class="legend">
+      <p><strong>PL:</strong> Proficiency Level</p>
+      <p><strong>MCQ:</strong> Multiple Choice Questions</p>
+      <p><strong>OE:</strong> Open-ended Questions</p>
+      <p><strong>E:</strong> Essay Questions</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

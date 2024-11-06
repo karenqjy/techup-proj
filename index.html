@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiring Assessment Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hiring Assessment Generator</h1>
+        
+        <form id="testCriteriaForm">
+            <label for="competency">Competency:</label>
+            <input type="text" id="competency" name="competency" required>
+
+            <label for="proficiency">Proficiency Level:</label>
+            <select id="proficiency" name="proficiency">
+                <option value="L1">L1</option>
+                <option value="L2">L2</option>
+                <option value="L3">L3</option>
+            </select>
+
+            <label for="numQuestions">Number of Questions:</label>
+            <input type="number" id="numQuestions" name="numQuestions" min="1" max="80" required>
+
+            <label for="questionType">Question Type:</label>
+            <select id="questionType" name="questionType">
+                <option value="multipleChoice">Multiple Choice</option>
+                <option value="shortAnswer">Short Answer</option>
+                <option value="essay">Essay</option>
+            </select>
+
+            <button type="submit">Generate Assessment</button>
+        </form>
+
+        <h2>Generated Assessment</h2>
+        <div id="assessmentContainer"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -29,26 +29,41 @@
         <div id="competencies-section" class="competencies-section"></div>
 
         <div class="totals-time-wrapper">
-            <div class="total-questions-time">
-                <h3><strong>Total Number of Questions</strong></h3>
+            <!-- Total Number of Questions Section -->
+            <div class="total-section">
+                <h3 class="section-title">Total Number of Questions</h3>
                 <div class="question-count">
-                    <label><strong>MCQ</strong></label><input type="text" id="total-mcq" readonly>
-                    <label><strong>OE</strong></label><input type="text" id="total-oe" readonly>
-                    <label><strong>E</strong></label><input type="text" id="total-e" readonly>
+                    <label for="total-mcq">MCQ</label>
+                    <input type="text" id="total-mcq" readonly>
+                    
+                    <label for="total-oe">OE</label>
+                    <input type="text" id="total-oe" readonly>
+                    
+                    <label for="total-e">E</label>
+                    <input type="text" id="total-e" readonly>
                 </div>
-
-                <h3><strong>Time Allocated</strong></h3>
+            </div>
+        
+            <!-- Time Allocated Section -->
+            <div class="total-section">
+                <h3 class="section-title">Time Allocated</h3>
                 <div class="time-count">
-                    <label><strong>MCQ</strong></label><input type="text" id="time-mcq" readonly>
-                    <label><strong>OE</strong></label><input type="text" id="time-oe" readonly>
-                    <label><strong>E</strong></label><input type="text" id="time-e" readonly>
-                    <div class="total-time">
-                        <label><strong>Total Time Allocated</strong></label><input type="text" id="total-time" readonly>
-                    </div>
+                    <label for="time-mcq">MCQ</label>
+                    <input type="text" id="time-mcq" readonly>
+                    
+                    <label for="time-oe">OE</label>
+                    <input type="text" id="time-oe" readonly>
+                    
+                    <label for="time-e">E</label>
+                    <input type="text" id="time-e" readonly>
+                </div>
+                <div class="total-time-wrapper">
+                    <label for="total-time">Total Time Allocated</label>
+                    <input type="text" id="total-time" readonly>
                 </div>
             </div>
         </div>
-
+        
         <div class="time-per-question">
             <h3><strong>Time Allocated per Question</strong></h3>
             <p><strong>MCQ:</strong> 1 min/question, <strong>OE:</strong> 3 mins/question, <strong>E:</strong> 30 mins/question</p>

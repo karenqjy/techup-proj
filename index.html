@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Competencies Assessment Generator</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competencies Assessment Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Competencies Assessment Generator</h1>
+    <div class="container">
+        <h1 class="title">Competencies Assessment Generator</h1>
+        
+        <div class="form-group">
+            <label for="job-grade">Job Grade</label>
+            <select id="job-grade">
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                <option value="H">H</option>
+                <option value="I">I</option>
+                <option value="J">J</option>
+                <option value="K">K</option>
+                <option value="L">L</option>
+                <option value="M">M</option>
+            </select>
+        </div>
 
-    <!-- Job Grade Dropdown -->
-    <div class="form-group">
-      <label for="job-grade">Job Grade</label>
-      <select id="job-grade">
-        <option value="D">D</option>
-        <option value="E">E</option>
-        <option value="F">F</option>
-        <option value="G">G</option>
-        <option value="H">H</option>
-        <option value="I">I</option>
-        <option value="J">J</option>
-        <option value="K">K</option>
-        <option value="L">L</option>
-        <option value="M">M</option>
-      </select>
+        <div id="competencies-section" class="competencies-section"></div>
+
+        <div class="totals-time-wrapper">
+            <div class="total-questions-time">
+                <h3><strong>Total Number of Questions</strong></h3>
+                <div class="question-count">
+                    <label><strong>MCQ</strong></label><input type="text" id="total-mcq" readonly>
+                    <label><strong>OE</strong></label><input type="text" id="total-oe" readonly>
+                    <label><strong>E</strong></label><input type="text" id="total-e" readonly>
+                </div>
+
+                <h3><strong>Time Allocated</strong></h3>
+                <div class="time-count">
+                    <label><strong>MCQ</strong></label><input type="text" id="time-mcq" readonly>
+                    <label><strong>OE</strong></label><input type="text" id="time-oe" readonly>
+                    <label><strong>E</strong></label><input type="text" id="time-e" readonly>
+                    <div class="total-time">
+                        <label><strong>Total Time Allocated</strong></label><input type="text" id="total-time" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="time-per-question">
+            <h3><strong>Time Allocated per Question</strong></h3>
+            <p><strong>MCQ:</strong> 1 min/question, <strong>OE:</strong> 3 mins/question, <strong>E:</strong> 30 mins/question</p>
+        </div>
+
+        <div class="legends">
+            <h3><strong>Legends</strong></h3>
+            <p><strong>PL:</strong> Proficiency Level, <strong>MCQ:</strong> Multiple Choice Questions, <strong>OE:</strong> Open-ended Questions, <strong>E:</strong> Essay Questions</p>
+        </div>
+
+        <button onclick="generateAssessment()" class="generate-button">Generate Assessment</button>
+
+        <div id="assessment-output" class="assessment-output">
+            <h3>Generated Assessment Placeholder</h3>
+            <p>Your generated assessment will appear here.</p>
+        </div>
     </div>
 
-    <!-- Competencies Section (this will be dynamically populated) -->
-    <div id="competencies-section"></div>
-
-    <!-- Legend -->
-    <div class="legend">
-      <p><strong>PL:</strong> Proficiency Level</p>
-      <p><strong>MCQ:</strong> Multiple Choice Questions</p>
-      <p><strong>OE:</strong> Open-ended Questions</p>
-      <p><strong>E:</strong> Essay Questions</p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

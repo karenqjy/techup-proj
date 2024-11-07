@@ -1,106 +1,148 @@
-/* General reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Page container */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fb;
-    color: #333;
-    line-height: 1.6;
-    padding: 30px;
-  }
-  
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Heading styles */
-  h1 {
-    text-align: center;
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-  
-  /* Form group styling */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  /* Label styling */
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  /* Select box and input fields */
-  select, input[type="number"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-  }
-  
-  select:focus, input[type="number"]:focus {
-    border-color: #007bff;
-    outline: none;
-    background-color: #fff;
-  }
-  
-  /* Styling for competency section */
-  #competencies-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  /* Legend styling */
-  .legend {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-top: 30px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-  }
-  
-  .legend p {
-    margin: 0;
-    color: #333;
-  }
-  
-  /* Flexbox layout for competency fields */
-  .competency {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
-  
-  /* Styling for competency fields (proficiency, MCQ, OE, E) */
-  .competency > div {
-    flex: 1;
-  }
-  
-  .competency input[type="number"] {
-    width: 100%;
-  }
-  
-  /* Title for competency labels */
-  .competency label {
-    margin-bottom: 5px;
-  }
-  
-  
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f8fc;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 800px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  text-align: center;
+  color: #004085;
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.form-group, .totals-time-wrapper {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 5px;
+}
+
+select, input[type="text"], input[type="number"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+select#job-grade {
+  width: 80px;
+}
+
+.competency {
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #f0f4f8;
+  border: 1px solid #d1e0eb;
+  border-radius: 8px;
+}
+
+.competency-header {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  display: inline-block;
+  width: 150px;
+}
+
+.competency .fields {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.competency label {
+  margin-right: 10px;
+}
+
+select.competency-dropdown {
+  width: 320px;
+}
+
+select.proficiency-level, input[type="number"] {
+  width: 60px;
+  text-align: center;
+  margin-right: 12px;
+}
+
+.total-questions-time {
+  padding: 20px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.question-count, .time-count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.question-count label, .time-count label {
+  display: inline-block;
+  font-weight: bold;
+  color: #555;
+}
+
+.time-count .total-time {
+  margin-top: 15px;
+}
+
+.time-per-question, .legends {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #555;
+  background-color: #e9f1f8;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.time-per-question h3, .legends h3 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #004085;
+}
+
+.generate-button {
+  display: block;
+  margin: 30px auto;
+  padding: 14px 28px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-button:hover {
+  background-color: #004085;
+}
+
+.assessment-output {
+  margin-top: 20px;
+  text-align: center;
+  padding: 12px;
+  color: #333;
+  font-size: 15px;
+  background-color: #eef3f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
